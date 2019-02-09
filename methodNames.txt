@@ -1,1 +1,13 @@
 List the methods used in the project below for fellow teammates to view and keep uniformity.
+
+        public void On_Load()//Event that occurs once the program begins or the web page is loaded - NH//
+        private void DotRandomizeMethod()//Method used to create & Randomize the location of the Dot - NH//
+        private void DotLocation()//Method used to locate the dot/fruit for the snake to eat - NH
+        private void CreatingDot(int x, int y)// Method to generate a new dot/fruit on the map - NH
+        public bool BaitProtocol()// This method will be used to manipulate the dot/fruit so it does not appear on the border/snake - NH
+        public bool BaitEaten()//Used to determine if the dot/fruit was eaten by the snake or not.
+
+
+
+
+
