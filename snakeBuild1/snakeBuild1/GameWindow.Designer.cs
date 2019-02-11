@@ -34,11 +34,13 @@
             // 
             // gridPB
             // 
+            this.gridPB.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gridPB.Location = new System.Drawing.Point(22, 12);
             this.gridPB.Name = "gridPB";
             this.gridPB.Size = new System.Drawing.Size(463, 336);
             this.gridPB.TabIndex = 0;
             this.gridPB.TabStop = false;
+            this.gridPB.Paint += new System.Windows.Forms.PaintEventHandler(this.gridPB_Paint);
             // 
             // GameWindow
             // 
@@ -48,6 +50,7 @@
             this.Controls.Add(this.gridPB);
             this.Name = "GameWindow";
             this.Text = "Snake Game";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gridPB)).EndInit();
             this.ResumeLayout(false);
 
@@ -55,7 +58,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox gridPB;
+        public System.Windows.Forms.PictureBox gridPB;
     }
 }
 
