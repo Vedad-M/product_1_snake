@@ -45,32 +45,47 @@ namespace snakeBuild1
             switch (e.KeyData)
             {
                 case Keys.Enter:
+                    startButton_Click(this, e);
+
                     // we will use this to begin the game
                     break;
                 case Keys.Space:
+                    if (startButton.Text == "Start Game")
+                    {
+                        gameLoop.Stop();
+                    }
+                    else if(startButton.Text == "Pause Game")
+                    {
+                        
+                        gameLoop.Start();
+                    }
                     // we will use this to pause the game 
                     break;
                 case Keys.Right:
                     if (direction != 2)
                     {
+                       
                         direction = 0;
                     }
                     break;
                 case Keys.Down:
                     if (direction != 3)
                     {
+                        
                         direction = 1;
                     }
                     break;
                 case Keys.Left:
                     if (direction != 0)
                     {
+                       
                         direction = 2;
                     }
                     break;
                 case Keys.Up:
                     if (direction !=1)
                     {
+                        
                         direction = 3;
                     }
                     break;
@@ -86,11 +101,11 @@ namespace snakeBuild1
                 {
                     Restart();
                 }
-                if (snake.body[0].X < 0 || snake.body[0].X > 463)
+                if (snake.body[0].X < 0 || snake.body[0].X > gridPB.MaximumSize.Width)
                 {
                     Restart();
                 }
-                if (snake.body[0].Y < 0 || snake.body[0].Y > 336)
+                if (snake.body[0].Y < 0 || snake.body[0].Y > gridPB.MinimumSize.Height)
                 {
                     Restart();
                 }
@@ -102,52 +117,64 @@ namespace snakeBuild1
 
                 }
                 
-                gridPB.Invalidate();
+               
             }
-
+            gridPB.Invalidate();
         }
 
         private void Restart()
         {
             gameLoop.Stop();
-            graphics.Clear(SystemColors.Control);
+            gridPB.Container.Dispose();
+           // gridPB.graphics.Clear();
             snake = new Snake();
             food = new Food(rand);
             direction = 0;
             score = 1;
 
         }
-        public void On_Load()//Event that occurs once the program begins or the web page is loaded - NH//
-        {
-           
-        }
-        private void DotRandomizeMethod()//Method used to create & Randomize the location of the Dot - NH//
-        {
-           
-
-        }
-        private void DotLocation()//Method used to locate the dot/fruit for the snake to eat - NH
-        {
-
-        }
-        private void CreatingDot(int x, int y)// Method to generate a new dot/fruit on the map - NH
-        {
-            
-
-        }
-        public bool BaitProtocol()// This method will be used to manipulate the dot/fruit so it does not appear on the border/snake - NH
-        {
-            return true; 
-        }
-        public bool BaitEaten()//Used to determine if the dot/fruit was eaten by the snake or not.
-        {
-            return false;
-        }
-
         private void startButton_Click(object sender, EventArgs e)
         {
-            
-        }
+          
+            if (startButton.Text == "Start Game")
+            {
+                gameLoop.Stop();
+                startButton.Text = "Pause Game";
+            }else if(startButton.Text == "Pause Game")
+            {
+                gameLoop.Start();
+                startButton.Text = "Start Game";
+            }
+            }
+
+        //public void On_Load()//Event that occurs once the program begins or the web page is loaded - NH//
+        //{
+
+        //}
+        //private void DotRandomizeMethod()//Method used to create & Randomize the location of the Dot - NH//
+        //{
+
+
+        //}
+        //private void DotLocation()//Method used to locate the dot/fruit for the snake to eat - NH
+        //{
+
+        //}
+        //private void CreatingDot(int x, int y)// Method to generate a new dot/fruit on the map - NH
+        //{
+
+
+        //}
+        //public bool BaitProtocol()// This method will be used to manipulate the dot/fruit so it does not appear on the border/snake - NH
+        //{
+        //    return true; 
+        //}
+        //public bool BaitEaten()//Used to determine if the dot/fruit was eaten by the snake or not.
+        //{
+        //    return false;
+        //}
+
+
     }
 
     

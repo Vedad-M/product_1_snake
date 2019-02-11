@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.gridPB = new System.Windows.Forms.PictureBox();
             this.menuToolStrip = new System.Windows.Forms.ToolStrip();
             this.fileToolStripButton = new System.Windows.Forms.ToolStripLabel();
             this.EditToolstripButton = new System.Windows.Forms.ToolStripLabel();
             this.startButton = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridPB)).BeginInit();
             this.menuToolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -43,6 +41,7 @@
             // 
             this.gridPB.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gridPB.Location = new System.Drawing.Point(22, 12);
+            this.gridPB.MaximumSize = new System.Drawing.Size(463, 336);
             this.gridPB.Name = "gridPB";
             this.gridPB.Size = new System.Drawing.Size(463, 336);
             this.gridPB.TabIndex = 0;
@@ -108,7 +107,6 @@
         private System.Windows.Forms.ToolStripLabel fileToolStripButton;
         private System.Windows.Forms.ToolStripLabel EditToolstripButton;
         private System.Windows.Forms.Button startButton;
-        private System.Windows.Forms.Timer timer1;
     }
 }
 
