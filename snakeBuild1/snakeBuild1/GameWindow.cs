@@ -19,8 +19,9 @@ namespace snakeBuild1
         private Random rand = new Random();
         private Graphics graphics;
         private Snake snake;
-        private Food food; 
+        private Food food;
       
+
         public GameWindow()
         {
             InitializeComponent();
@@ -34,9 +35,10 @@ namespace snakeBuild1
 
         private void gridPB_Paint(object sender, PaintEventArgs e)
         {
-            graphics = gridPB.CreateGraphics();
+            graphics = e.Graphics;
             snake.Draw(graphics);
-            food.Draw(graphics);
+            food.CreateFood(graphics);
+
         }
         private void GameWindow_KeyDown(object sender, KeyEventArgs e)
         {
@@ -92,11 +94,11 @@ namespace snakeBuild1
                 {
                     Restart();
                 }
-                if (snake.body[0].IntersectsWith(food.square))
+                if (snake.body[0].IntersectsWith(food.foodSquare))
                 {
                     score++;
                     snake.Grow();
-                    food.Generate(rand);
+                    food.FoodLocation(rand);
 
                 }
                 
@@ -117,16 +119,11 @@ namespace snakeBuild1
         }
         public void On_Load()//Event that occurs once the program begins or the web page is loaded - NH//
         {
-            Brush brush  ;
-            Bitmap bitmap;
-            bitmap = new Bitmap(1080,1920);
-            Graphics graph = Graphics.FromImage(bitmap);
-            //graph.FillRectangle(brush, 10, 10, 1080, 1920);
+           
         }
         private void DotRandomizeMethod()//Method used to create & Randomize the location of the Dot - NH//
         {
-            Random rand = new Random();
-
+           
 
         }
         private void DotLocation()//Method used to locate the dot/fruit for the snake to eat - NH
@@ -147,9 +144,10 @@ namespace snakeBuild1
             return false;
         }
 
-    
-
-     
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 
     
