@@ -1,0 +1,26 @@
+public class Food
+    {
+        public Rectangle foodPiece;
+        private int x;
+        private int y;
+        private int width = 10;
+        private int height = 10;
+
+        public Food(Random rnd)
+        {
+            GenerateFood(rnd);
+            foodPiece = new Rectangle(x, y, width, height);
+        }
+        public void Draw(Graphics g)
+        {
+            foodPiece.X = x;
+            foodPiece.Y = y;
+            g.FillRectangle(Brushes.Green, foodPiece);
+        }
+
+        public void GenerateFood(Random rnd)
+        {
+            x = rnd.Next(0, 30) * 10;
+            y = rnd.Next(0, 20) * 10;
+        }
+    }
