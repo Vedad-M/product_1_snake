@@ -20,7 +20,7 @@ namespace snakeBuild1
         private Graphics graphics;
         private Snake snake;
         private Food food;
-      
+        
 
         public GameWindow()
         {
@@ -99,15 +99,15 @@ namespace snakeBuild1
             {
                 if (snake.body[0].IntersectsWith(snake.body[i]))
                 {
-                    Restart();
+                    TestStopFeature();
                 }
                 if (snake.body[0].X < 0 || snake.body[0].X > gridPB.MaximumSize.Width)
                 {
-                    Restart();
+                    TestStopFeature();
                 }
                 if (snake.body[0].Y < 0 || snake.body[0].Y > gridPB.MinimumSize.Height)
                 {
-                    Restart();
+                    TestStopFeature();
                 }
                 if (snake.body[0].IntersectsWith(food.foodSquare))
                 {
@@ -125,7 +125,7 @@ namespace snakeBuild1
         private void Restart()
         {
             gameLoop.Stop();
-            gridPB.Container.Dispose();
+           // PictureBox pictureBox = gridPB.Container.Dispose(); // I think the problem is right here but I am unsure
            // gridPB.graphics.Clear();
             snake = new Snake();
             food = new Food(rand);
@@ -135,17 +135,23 @@ namespace snakeBuild1
         }
         private void startButton_Click(object sender, EventArgs e)
         {
-          
-            if (startButton.Text == "Start Game")
-            {
-                gameLoop.Stop();
-                startButton.Text = "Pause Game";
-            }else if(startButton.Text == "Pause Game")
-            {
-                gameLoop.Start();
-                startButton.Text = "Start Game";
-            }
-            }
+            gameLoop.Start();
+            Restart();
+            
+        }
+
+        private void stopButton_Click(object sender, EventArgs e)
+        {
+            gameLoop.Stop();
+            statusTextBox.Text = "Game over.";
+        }
+
+        private void TestStopFeature()
+        {
+            gameLoop.Stop();
+            statusTextBox.Text = "Game over.";
+        }
+       
 
         //public void On_Load()//Event that occurs once the program begins or the web page is loaded - NH//
         //{

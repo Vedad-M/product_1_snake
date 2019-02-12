@@ -33,6 +33,8 @@
             this.fileToolStripButton = new System.Windows.Forms.ToolStripLabel();
             this.EditToolstripButton = new System.Windows.Forms.ToolStripLabel();
             this.startButton = new System.Windows.Forms.Button();
+            this.stopButton = new System.Windows.Forms.Button();
+            this.statusTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridPB)).BeginInit();
             this.menuToolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -81,11 +83,30 @@
             this.startButton.UseVisualStyleBackColor = true;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
+            // stopButton
+            // 
+            this.stopButton.Location = new System.Drawing.Point(507, 85);
+            this.stopButton.Name = "stopButton";
+            this.stopButton.Size = new System.Drawing.Size(75, 23);
+            this.stopButton.TabIndex = 3;
+            this.stopButton.Text = "Stop Game";
+            this.stopButton.UseVisualStyleBackColor = true;
+            this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
+            // 
+            // statusTextBox
+            // 
+            this.statusTextBox.Location = new System.Drawing.Point(507, 132);
+            this.statusTextBox.Name = "statusTextBox";
+            this.statusTextBox.Size = new System.Drawing.Size(100, 20);
+            this.statusTextBox.TabIndex = 4;
+            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(713, 360);
+            this.Controls.Add(this.statusTextBox);
+            this.Controls.Add(this.stopButton);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.menuToolStrip);
             this.Controls.Add(this.gridPB);
@@ -107,6 +128,8 @@
         private System.Windows.Forms.ToolStripLabel fileToolStripButton;
         private System.Windows.Forms.ToolStripLabel EditToolstripButton;
         private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Button stopButton;
+        private System.Windows.Forms.TextBox statusTextBox;
     }
 }
 
