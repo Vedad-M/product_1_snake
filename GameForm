@@ -1,0 +1,100 @@
+public partial class GameWindow : Form
+    {
+        private int score = 1;
+        private int dir = 0;
+        private Timer gameLoop = new Timer();
+        private Random rnd = new Random();
+        private Graphics g;
+        private Snake snake;
+        private Food food;
+
+
+        public GameWindow()
+        {
+            InitializeComponent();
+            snake = new Snake();
+            food = new Food(rnd);
+            gameLoop.Interval = 75;
+            gameLoop.Tick += Update;
+        }
+
+        //private void gridPB_Paint(object sender, PaintEventArgs e)
+        //{
+        //    g = this.CreateGraphics();
+        //    snake.Draw(g);
+        //    food.Draw(g);
+        //}
+        private void GameWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyData)
+            {
+                case Keys.Enter:
+                    gameLoop.Start();
+                    break;
+                case Keys.Right:
+                    if (dir != 1)
+                        dir = 0;
+                    break;
+                case Keys.Left:
+                    if (dir != 0)
+                        dir = 1;
+                    break;
+                case Keys.Up:
+                    if (dir != 2)
+                        dir = 3;
+                    break;
+                case Keys.Down:
+                    if (dir != 3)
+                        dir = 2;
+                    break;
+            }
+        }
+
+        private void Update(object sender, EventArgs e)
+        {
+            snake.Move(dir);
+            for (int i = 1; i < snake.Body.Length; i++)
+            {
+                if (snake.Body[0].IntersectsWith(snake.Body[i]))
+                    Restart();
+                if (snake.Body[0].IntersectsWith(food.foodPiece))
+                {
+                    snake.Grow();
+                    food.GenerateFood(rnd);
+                }
+                this.Invalidate();
+            }
+        }
+     
+
+        private void Restart()
+        {
+            gameLoop.Stop();
+            g.Clear(SystemColors.Control);
+            snake = new Snake();
+            food = new Food(rnd);
+            dir = 0;
+            score = 1;
+
+        }
+        //private void startButton_Click(object sender, EventArgs e)
+        //{
+
+        //    if (startButton.Text == "Start Game")
+        //    {
+        //        gameLoop.Start();
+        //        startButton.Text = "Pause Game";
+        //    }
+        //    else if (startButton.Text == "Pause Game")
+        //    {
+        //        gameLoop.Stop();
+        //        startButton.Text = "Start Game";
+        //    }
+        //}
+
+        private void GameWindow_Paint(object sender, PaintEventArgs e)
+        {
+            g = this.CreateGraphics();
+            snake.Draw(g);
+            food.Draw(g);
+        }
