@@ -9,56 +9,52 @@ namespace snakeBuild1
 {
     public class Snake
     {
-        public Rectangle[] body;
-        private int X =0, Y=0, width = 10, height = 10;
-        
+        public Rectangle[] Body;
+        public int x = 0;
+        public int y = 50;
+        private int width = 10;
+        private int height = 10;
+
         public Snake()
         {
-            Random rand = new Random();
-            X = rand.Next(0, 463);
-            Y = rand.Next(0, 336);
-            body = new Rectangle[1];
-            body[0] = new Rectangle(X,Y ,width, height);
+            Body = new Rectangle[3];
+            Body[0] = new Rectangle(x, y, width, height);
         }
         public void Draw()
         {
-            for (int i = body.Length-1; i > 0 ; i--)
+            for (int i = Body.Length - 1; i > 0; i--)
             {
-                body[i] = body[i - 1];
+                Body[i] = Body[i - 1];
             }
         }
         public void Draw(Graphics g)
         {
-            g.FillRectangles(Brushes.Green, body);
+            g.FillRectangles(Brushes.Blue, Body);
         }
-
-        public void Move(int direction)
+        public void Move(int move)
         {
             Draw();
-            switch(direction)
+            switch (move)
             {
-                case 0: // right
-                    body[0].X += 10;
+                case 0:
+                    Body[0].X += 10;
                     break;
-                case 1:// down
-                    body[0].Y += 10;
+                case 1:
+                    Body[0].X -= 10;
                     break;
-                case 2:// left 
-                    body[0].X -= 10;
+                case 2:
+                    Body[0].Y += 10;
                     break;
-                case 3://up 
-                    body[0].Y -= 10;
+                case 3:
+                    Body[0].Y -= 10;
                     break;
             }
         }
-
         public void Grow()
         {
-            List<Rectangle> temp = body.ToList();
-            temp.Add(new Rectangle(body[body.Length - 1].X, body[body.Length - 1].Y, width, height));
-            body = temp.ToArray();
-
-       
+            List<Rectangle> temp = Body.ToList();
+            temp.Add(new Rectangle(Body[Body.Length - 1].X, Body[Body.Length - 1].Y, width, height));
+            Body = temp.ToArray();
         }
     }
 }
