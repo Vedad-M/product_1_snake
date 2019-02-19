@@ -1,4 +1,4 @@
-<!DoCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
 	<nav>
@@ -14,9 +14,9 @@
 	<img src="mainpagesnake.jpg" data-speed="1"class="img-parallax" alt ="parallax">
 	 <h2 id="parallaxMsg" align="center">Welcome!</h2>
 
-<form class="form" method="POST" action="action_page.php">
+<form class="form" action="/action_page.php">
 USERNAME: <input type="text" name="username" placeholder="USERNAME"value=""><br>
-PASSWORD: <input type="text" name="password" placeholder="PASSWORD" value=""><br>
+PASSWORD: <input type="Password" name="password" placeholder="PASSWORD" value=""><br>
 <button>Submit</button>
 </form>
 
