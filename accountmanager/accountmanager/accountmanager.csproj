@@ -88,6 +88,7 @@
     <Content Include="Logon.aspx" />
     <Content Include="Web.config" />
     <Content Include="Home.aspx" />
+    <Content Include="IndexTest.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -126,6 +127,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexTest.aspx.cs">
+      <DependentUpon>IndexTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexTest.aspx.designer.cs">
+      <DependentUpon>IndexTest.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
