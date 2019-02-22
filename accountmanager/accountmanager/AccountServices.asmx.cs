@@ -10,7 +10,7 @@ namespace accountmanager
     /// <summary>
     /// Summary description for AccountServices
     /// </summary>
-    [WebService(Namespace = "https://mi3-wsr1.supercp.com")]
+    [WebService(Namespace = "https://food.cis440.com")]
 	[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
 	[System.ComponentModel.ToolboxItem(false)]
 	// To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
@@ -19,7 +19,7 @@ namespace accountmanager
 	{
 
 		[WebMethod]
-		public int NumberOfAccounts()
+		public int Users()
 		{
 			//here we are grabbing that connection string from our web.config file
 			string sqlConnectString = System.Configuration.ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
