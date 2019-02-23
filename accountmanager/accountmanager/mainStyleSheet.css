@@ -1,0 +1,115 @@
+﻿
+button {
+    color: white;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+body, h1, form {
+    font-family: "Raleway", sans-serif
+}
+
+body, html {
+    height: 100%
+}
+
+a {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #d3d3d3;
+}
+
+li {
+    float: left;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover {
+            background-color: #4CAF50;
+        }
+
+.parallax {
+    color: #d3d3d3;
+    font-size: 25px;
+    background-image: url('mainpagesnake.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 100% transform: translate(50%,0);
+    width: 100%;
+}
+
+.img-parallax {
+    width: 50vmax;
+    z-index: -1;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    pointer-events: none
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    font-size: 12px;
+    opacity: .85;
+}
+
+    .form input {
+        font-family: "Raleway", sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: #4CAF50;
+        width: 100%;
+        border: 0;
+        padding: 12px;
+        color: #FFFFFF;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+        opacity: .5;
+        margin: 10px
+    }
+
+    .form button {
+        font-family: "Raleway", sans-serif;
+        padding: 12px;
+        color: #d3d3d3;
+        margin: 10px;
+        background: white;
+        opacity: .5;
+        border: 2px dotted #4CAF50;
+    }
+
+.mainTitle {
+    text-align: center;
+}
+
+.subTitle {
+    text-align: center;
+}

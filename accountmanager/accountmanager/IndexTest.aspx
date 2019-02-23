@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en" class="noBoard">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head >
+<head>
 
     <title></title>
 	<meta charset="utf-8">

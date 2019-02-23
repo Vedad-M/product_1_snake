@@ -85,7 +85,12 @@
     <Content Include="AccountServices.asmx" />
     <Content Include="Game.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="javascript.js" />
     <Content Include="Logon.aspx" />
+    <Content Include="mainStyleSheet.css" />
+    <None Include="Resources\mainSnakeImage.ico" />
+    <None Include="Resources\mainpagesnake.jpg" />
+    <None Include="Resources\SnakeImage.bmp" />
     <Content Include="Web.config" />
     <Content Include="Home.aspx" />
     <Content Include="IndexTest.aspx" />
@@ -135,6 +140,16 @@
     <Compile Include="IndexTest.aspx.designer.cs">
       <DependentUpon>IndexTest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\mainSnake.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mainSnake.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -149,6 +164,16 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\mainSnake.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>mainSnake.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

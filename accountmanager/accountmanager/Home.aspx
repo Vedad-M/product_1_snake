@@ -2,13 +2,14 @@
 
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+
 <head>
+  <title>Snake Game</title>
  <style>
 body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 .bgimg {
-  background-image: url('mainpagesnake.jpg');
+  background-image: url('Resources/mainpagesnake.jpg');
   min-height: 100%;
   background-position: center;
   background-size: cover;
@@ -29,7 +30,7 @@ body, html {height: 100%}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="stylesheet.css" type="text/css">
+<link rel="stylesheet" href="mainStyleSheet.css" type="text/css">
 
 
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
@@ -42,13 +43,14 @@ body, html {height: 100%}
 
     <hr class="w3-border-grey" style="margin:auto;width:40%">
     <p class="w3-large w3-center">
-      <button type ="button"> <a href= "game.html">Begin</button></a>
+      <button type ="button"><a href= "game.html">Begin </a></button>
     </p>
   </div>
   <div class="w3-display-bottomleft w3-padding-large">
    <a href ="about.html"> Powered by WillCode4Food™️</a>
   </div>
 </div>
+    <div>
   <div class="w3-display-bottomright w3-padding-large">
    <a href ="logon.html"> Log In</a>
   </div>
