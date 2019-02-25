@@ -10,6 +10,6 @@
 namespace accountmanager {
     
     
-    public partial class Game {
+    public partial class WebForm3 {
     }
 }

@@ -83,11 +83,13 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AccountServices.asmx" />
+    <Content Include="Contact.aspx" />
     <Content Include="Game.aspx" />
     <Content Include="Global.asax" />
     <Content Include="javascript.js" />
     <Content Include="Logon.aspx" />
     <Content Include="mainStyleSheet.css" />
+    <Content Include="Scoreboard.aspx" />
     <None Include="Resources\mainSnakeImage.ico" />
     <None Include="Resources\mainpagesnake.jpg" />
     <None Include="Resources\SnakeImage.bmp" />
@@ -108,6 +110,13 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Game.aspx.cs">
       <DependentUpon>Game.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -150,6 +159,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>mainSnake.resx</DependentUpon>
     </Compile>
+    <Compile Include="Scoreboard.aspx.cs">
+      <DependentUpon>Scoreboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scoreboard.aspx.designer.cs">
+      <DependentUpon>Scoreboard.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -164,6 +180,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resource.resx">
