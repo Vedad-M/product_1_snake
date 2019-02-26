@@ -8,11 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="mainStyleSheet.css" type="text/css">
-
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script type='text/javascript'>
-
   	$(document).ready(function(){
     var canvas = document.getElementById('c'),
         c = canvas.getContext('2d'),
@@ -101,12 +98,17 @@
         c.textAlign = 'center';
         c.fillText('Game Over', width/2*pixelsize, height/2.3*pixelsize);
         c.fillStyle = '#fff';
+        c.font = '14px sans-serif'
+        c.fillText('Please enter your Name down below to save your score to the ScoreBoard!!', width / 2 * pixelsize, height / 1.9 * pixelsize);
         c.font = '12px sans-serif';
-        c.fillText('Press Space to Play Again!!',width/2*pixelsize, height/1.8*pixelsize);
-         c.fillStyle = '#fff';
-         c.font = '12px sans-serif';
-         c.fillText('Score: ' + score, width/2*pixelsize, height/1.5*pixelsize);
-    }
+        c.fillText('Press Space to Play Again!!',width/2*pixelsize, height/1.6*pixelsize);
+        c.fillStyle = '#fff';
+        c.font = '12px sans-serif';
+        //c.fillText('Score: ' + score, width / 2 * pixelsize, height / 1.4 * pixelsize);
+        var scoreLabel = document.getElementById('displayScore');
+        scoreLabel.value = scoreLabel.value + score;
+            }
+   
     
     function togglePause() {
         if(!gpaused) {
@@ -145,20 +147,6 @@
             endGame();
             return;
         }
-        //         var dif = document.getElementById("Dificulty");
-        // dif = dif.value;
-        //    if (dif == "Easy") 
-        // {
-        // 	var score = 100;
-        // }
-        // else if (dif == "Medium") 
-        // {
-        // 	var score = 200;
-        // }
-        // else if (dif == "Hard") 
-        // {
-        // 	var score = 300;
-        // }
         snake.unshift([x, y]);
         if(x == food[0] && y == food[1]) 
         {	
@@ -262,48 +250,59 @@
 body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 .bgimg {
-  background-image: url("Resources/mainpagesnake.jpg");
+  background-image: url("mainpagesnake.jpg");
   min-height: 100%;
   background-position: center;
   background-size: cover;
+}
+#nameLabel{
+    margin-left:20px;
+}
+#score{
+   display:inline;
+   margin-left: 40px;
+}
+#btnSubmit{
+    margin-left:50px;
+    font-size: 12px;
+    width:90px;
+    height:25px;
+    
 }
 
 </style>
     </head>
 <body>
-    <nav>
-     <ul>
-  <li><a href="Home.aspx">Home</a></li>
-    <li><a href="Game.aspx">The Game</a></li>
-  <li><a href="Scoreboard.aspx">Scoreboard</a></li>
-  <li><a href="About.aspx">About</a></li>
-  <li><a href="Contact.aspx">Contact Us!</a></li>
-</ul> 
-  </nav>
+
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
   <div class="logoSpace">
     Snake, The Game.
    
   </div>
-
-<div style="text-align: center; margin-top: 150px; margin-right: 375px;">
-	<p style="display: inline; margin-left: 10px">Dificulty:</p>
-  	<select id="Difficulty" style="display: inline;">
-  		<option id="dificulty" value="Easy">Easy</option>
-  		<option id="dificulty" value="Medium">Medium</option>
-  		<option id="dificulty" value="Hard">Hard</option>
+<div style="text-align: center; margin-top: 10px; margin-right: 375px;">
+	<p style="display: inline; margin-left: 80px">Dificulty:</p>
+  	<select  id="Dificulty" style="display: inline;">
+  		<option id="Dificulty" value="Easy">Easy</option>
+  		<option id="Dificulty" value="Medium">Medium</option>
+  		<option id="Dificulty" value="Hard">Hard</option>
   	</select>
-  	<p style="display: inline; margin-left: 10px;"> Score: <p id="scoreLabel" style="display: inline;"></p></p>
+  	<p style="display: inline; margin-left: 10px;"> Score: <p id="scoreLabel" style="display: inline;">0</p></p>
 </div>
   <div class="w3-display-middle">
-  	 <canvas id="c" width="800px" height="500px"></canvas>
-   
+  	 <canvas id="c" width="800px" height="500px"></canvas> 
+      <form runat="server" style ="margin-top:50px;">
+        <asp:Label runat="server" ID="nameLabel">Enter Your Name:</asp:Label>
+        <asp:TextBox runat="server" ID="nameText" Height="20px"></asp:TextBox>
+          <asp:Label runat="server" ID="score" >Your Score is:</asp:Label>       
+        <asp:Textbox runat="server" ID="displayScore" ReadOnly="true"></asp:Textbox>
+         <asp:Label runat="server" ID="messageBox"></asp:Label>
+          <asp:Button runat="server" text="Submit Score" ID="btnSubmit" OnClick="btnSubmit_Click"/>
+    </form>
   </div>
-     
+   
   <div class="w3-display-bottomleft w3-padding-large">
     Powered by WillCode4Food™️
   </div>
 </div>
-
 </body>
 </html>
