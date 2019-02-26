@@ -8,8 +8,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="mainStyleSheet.css" type="text/css">
+
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script type='text/javascript'>
+
   	$(document).ready(function(){
     var canvas = document.getElementById('c'),
         c = canvas.getContext('2d'),
@@ -259,7 +262,7 @@
 body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 .bgimg {
-  background-image: url("mainpagesnake.jpg");
+  background-image: url("Resources/mainpagesnake.jpg");
   min-height: 100%;
   background-position: center;
   background-size: cover;
@@ -282,9 +285,6 @@ body, html {height: 100%}
     Snake, The Game.
    
   </div>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="mainStyleSheet.css" type="text/css">
 
 <div style="text-align: center; margin-top: 150px; margin-right: 375px;">
 	<p style="display: inline; margin-left: 10px">Dificulty:</p>
@@ -297,7 +297,9 @@ body, html {height: 100%}
 </div>
   <div class="w3-display-middle">
   	 <canvas id="c" width="800px" height="500px"></canvas>
+   
   </div>
+     
   <div class="w3-display-bottomleft w3-padding-large">
     Powered by WillCode4Food™️
   </div>

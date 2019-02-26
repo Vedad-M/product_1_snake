@@ -51,13 +51,7 @@
         border: 2px dotted #4CAF50;
     }
     </style>
-    <script>
-        document.getElementById("resetButton").onclick = reset;
-
-        function reset() {
-            document.getElementById("resetButton").reset();
-        }
-    </script>
+   
  </head>  
 <body>
     <nav>
@@ -79,8 +73,6 @@
     <asp:Button runat="server" OnClick="LogOn_Click" Text="Submit"/>
 <button onclick ="LogOn_Click">Submit</button>
          
-<!--<asp:Button runat="server" OnClick="Reset_Click" Text="Try Again"/>*/-->
-<button id="resetButton" onclick="reset();"> Try Again</button>
       <asp:Label runat="server" id="label1"></asp:Label>
 </form>
    
