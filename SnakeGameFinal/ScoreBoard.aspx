@@ -41,13 +41,7 @@ table
     SNAKE 🐍
   </div>
   <div style="float: right; ">
-     <table>
-        <tr >
-            <th>Ranking</th>
-            <th>Player Name</th>
-            <th>Score</th>
-        </tr>
-    </table>
+    <asp:Panel ID="Panel1" runat="server"></asp:Panel>
   </div>>
    
   <div class="w3-display-bottomleft w3-padding-large">

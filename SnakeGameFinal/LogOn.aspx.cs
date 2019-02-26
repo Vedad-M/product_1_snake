@@ -31,11 +31,11 @@ namespace SnakeGameFinal
             ada.Fill(da, "users");
             if(da.Tables[0].Rows.Count > 0)
             {
-                label1.Text = "Users Information was found";
+                label1.Text = "Welcome Back User! You have been Logged In!";
             }
             else
             {
-                label1.Text = "The user's information is not an active account";
+                label1.Text = "The user's information you have entered is not valid, Please try again.";
             }
         }
     }
