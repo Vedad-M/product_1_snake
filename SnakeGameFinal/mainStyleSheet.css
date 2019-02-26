@@ -47,7 +47,7 @@ li {
 .parallax {
     color: #d3d3d3;
     font-size: 25px;
-    background-image: url('mainpagesnake.jpg');
+    background-image: url('Resources/mainpagesnake.jpg');
     height: 100%;
     background-attachment: fixed;
     background-position: right;
@@ -65,6 +65,9 @@ li {
     transform: translate(-50%,0);
     pointer-events: none
 }
+
+
+
 
 .form {
     position: relative;

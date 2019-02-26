@@ -13,7 +13,7 @@
 body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 .bgimg {
-  background-image: url('mainpagesnake.jpg');
+  background-image: url('Resources/mainpagesnake.jpg');
   min-height: 100%;
   background-position: center;
   background-size: cover;
@@ -44,6 +44,7 @@ table
   <li><a href="Contact.aspx">Contact Us!</a></li>
 </ul> 
   </nav>
+
 
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white" >
   <div class="w3-display-topleft w3-padding-large w3-xlarge">

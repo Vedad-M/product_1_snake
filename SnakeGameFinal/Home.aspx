@@ -21,7 +21,7 @@ body, html {height: 100%}
     <nav>
      <ul>
   <li><a href="Home.aspx">Home</a></li>
-    <li><a href="Game.aspx">The Game</a></li>
+    <li><a href="SnakeGame.aspx">The Game</a></li>
   <li><a href="Scoreboard.aspx">Scoreboard</a></li>
   <li><a href="About.aspx">About</a></li>
   <li><a href="Contact.aspx">Contact Us!</a></li>
@@ -44,15 +44,15 @@ body, html {height: 100%}
 
     <hr class="w3-border-grey" style="margin:auto;width:40%">
     <p class="w3-large w3-center">
-      <a href ="Game.aspx" >Begin</a>
+      <a href ="SnakeGame.aspx" >Begin</a>
   </div>
   <div class="w3-display-bottomleft w3-padding-large">
-   <a href ="about.html"> Powered by WillCode4Food™️</a>
+   <a href ="about.aspx"> Powered by WillCode4Food™️</a>
   </div>
 </div>
     <div>
   <div class="w3-display-bottomright w3-padding-large">
-   <a href ="logon.html"> Log In</a>
+   <a href ="LogOn.aspx"> Log In</a>
   </div>
 </div>
 

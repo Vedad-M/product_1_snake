@@ -282,12 +282,16 @@ body, html {height: 100%}
     Snake, The Game.
    
   </div>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="mainStyleSheet.css" type="text/css">
+
 <div style="text-align: center; margin-top: 150px; margin-right: 375px;">
 	<p style="display: inline; margin-left: 10px">Dificulty:</p>
   	<select id="Difficulty" style="display: inline;">
-  		<option id="Option1" value="Easy">Easy</option>
-  		<option id="Option2" value="Medium">Medium</option>
-  		<option id="Option3" value="Hard">Hard</option>
+  		<option id="dificulty" value="Easy">Easy</option>
+  		<option id="dificulty" value="Medium">Medium</option>
+  		<option id="dificulty" value="Hard">Hard</option>
   	</select>
   	<p style="display: inline; margin-left: 10px;"> Score: <p id="scoreLabel" style="display: inline;"></p></p>
 </div>

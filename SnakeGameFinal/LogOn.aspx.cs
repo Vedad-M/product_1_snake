@@ -36,7 +36,15 @@ namespace SnakeGameFinal
             else
             {
                 label1.Text = "The user's information you have entered is not valid, Please try again.";
+                
             }
         }
+        protected void Reset_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+
     }
 }
