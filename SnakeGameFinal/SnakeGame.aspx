@@ -268,7 +268,15 @@ body, html {height: 100%}
 </style>
     </head>
 <body>
-
+    <nav>
+     <ul>
+  <li><a href="Home.aspx">Home</a></li>
+    <li><a href="Game.aspx">The Game</a></li>
+  <li><a href="Scoreboard.aspx">Scoreboard</a></li>
+  <li><a href="About.aspx">About</a></li>
+  <li><a href="Contact.aspx">Contact Us!</a></li>
+</ul> 
+  </nav>
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
   <div class="logoSpace">
     Snake, The Game.
@@ -276,10 +284,10 @@ body, html {height: 100%}
   </div>
 <div style="text-align: center; margin-top: 150px; margin-right: 375px;">
 	<p style="display: inline; margin-left: 10px">Dificulty:</p>
-  	<select  id="Dificulty" style="display: inline;">
-  		<option id="Dificulty" value="Easy">Easy</option>
-  		<option id="Dificulty" value="Medium">Medium</option>
-  		<option id="Dificulty" value="Hard">Hard</option>
+  	<select id="Difficulty" style="display: inline;">
+  		<option id="Option1" value="Easy">Easy</option>
+  		<option id="Option2" value="Medium">Medium</option>
+  		<option id="Option3" value="Hard">Hard</option>
   	</select>
   	<p style="display: inline; margin-left: 10px;"> Score: <p id="scoreLabel" style="display: inline;"></p></p>
 </div>

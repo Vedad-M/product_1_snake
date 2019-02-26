@@ -35,6 +35,15 @@ table
 </head>
 
 <body>
+       <nav>
+     <ul>
+  <li><a href="Home.aspx">Home</a></li>
+    <li><a href="Game.aspx">The Game</a></li>
+  <li><a href="Scoreboard.aspx">Scoreboard</a></li>
+  <li><a href="About.aspx">About</a></li>
+  <li><a href="Contact.aspx">Contact Us!</a></li>
+</ul> 
+  </nav>
 
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white" >
   <div class="w3-display-topleft w3-padding-large w3-xlarge">
@@ -45,12 +54,11 @@ table
   </div>>
    
   <div class="w3-display-bottomleft w3-padding-large">
-   <a href ="about.html"> Powered by WillCode4Food™️</a>
+   <a href ="About.aspx"> Powered by WillCode4Food™️</a>
   </div>
 </div>
   <div class="w3-display-bottomright w3-padding-large">
-   <a href ="logon.html"> Log In</a>
+   <a href ="Logon.aspx"> Log In</a>
   </div>
-
 </body>
 </html>
